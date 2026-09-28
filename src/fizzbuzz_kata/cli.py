@@ -34,5 +34,5 @@ def main() -> None:
         parser.error("Provide either a single number, or --start and --end.")
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()
