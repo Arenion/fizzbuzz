@@ -5,4 +5,3 @@ from fizzbuzz_kata.core import fizzbuzz as fizzbuzz
 
 all = ["fizzbuzz"]
 version = "0.1.0"
-
