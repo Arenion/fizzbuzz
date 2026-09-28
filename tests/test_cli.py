@@ -15,6 +15,7 @@ def test_parser_accepts_range():
     assert args.start == 1
     assert args.end == 5
 
+
 def test_main_prints_single_value(monkeypatch, capsys):
     monkeypatch.setattr("sys.argv", ["fizzbuzz-kata", "15"])
     main()
@@ -31,5 +32,4 @@ def test_main_prints_range(monkeypatch, capsys):
 def test_main_requires_an_argument(monkeypatch):
     monkeypatch.setattr("sys.argv", ["fizzbuzz-kata"])
     with pytest.raises(SystemExit):
-
         main()
