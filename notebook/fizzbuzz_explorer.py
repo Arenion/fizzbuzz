@@ -6,9 +6,10 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
+    from collections import Counter
+
     import marimo as mo
     import matplotlib.pyplot as plt
-    from collections import Counter
 
     from fizzbuzz_kata import fizzbuzz
 
@@ -40,7 +41,7 @@ def _(mo):
 def _(end, fizzbuzz, start):
     lo, hi = sorted((start.value, end.value))
     results = [fizzbuzz(n) for n in range(lo, hi + 1)]
-    results
+    print(results)
     return (results,)
 
 
@@ -56,7 +57,7 @@ def _(Counter, plt, results):
     )
     ax.set_ylabel("Count")
     ax.set_title("Distribution of FizzBuzz outputs over the selected range")
-    fig
+    plt.show()
     return
 
 
